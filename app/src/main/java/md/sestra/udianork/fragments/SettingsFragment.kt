@@ -72,11 +72,13 @@ class SettingsFragment : Fragment() {
                 binding.btSettingsBackToMenu.text = "Back to menu"
                 binding.tvMusic.text = "Music"
                 binding.tvLanguages.text = "Language"
+                binding.btSaveSettings.text = "Save settings"
             }
             1 -> {
                 binding.btSettingsBackToMenu.text = "Назад в меню"
                 binding.tvMusic.text = "Музыка"
                 binding.tvLanguages.text = "Язык"
+                binding.btSaveSettings.text = "Сохранить настройки"
             }
         }
             }
