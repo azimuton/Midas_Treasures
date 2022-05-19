@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#DDF8BE"
+    tools:context=".fragments.SettingsFragment" >
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvMusic"
+            style="@style/settings_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="72dp"
+            android:layout_marginTop="132dp"
+            android:text="@string/music"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvLanguages"
+            style="@style/settings_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp"
+            android:text="@string/language"
+            app:layout_constraintStart_toStartOf="@+id/tvMusic"
+            app:layout_constraintTop_toBottomOf="@+id/tvMusic" />
+
+        <SeekBar
+            android:id="@+id/seekBar"
+            android:layout_width="135dp"
+            android:layout_height="24dp"
+            android:layout_marginStart="204dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvMusic"
+            app:layout_constraintStart_toEndOf="@+id/tvMusic"
+            app:layout_constraintTop_toTopOf="@+id/tvMusic"
+            app:layout_constraintVertical_bias="0.476" />
+
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="250dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="80dp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvLanguages"
+            app:layout_constraintStart_toEndOf="@+id/tvLanguages"
+            app:layout_constraintTop_toTopOf="@+id/tvLanguages"
+            app:layout_constraintVertical_bias="1.0"
+            tools:ignore="SpeakableTextPresentCheck,TouchTargetSizeCheck" />
+
+        <TextView
+            android:id="@+id/textView12"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/settings_text"
+            android:layout_marginEnd="8dp"
+            android:text="@string/minus"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+            app:layout_constraintEnd_toStartOf="@+id/seekBar"
+            app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+        <TextView
+            android:id="@+id/textView13"
+            style="@style/settings_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:text="@string/plus"
+            app:layout_constraintBottom_toBottomOf="@+id/seekBar"
+            app:layout_constraintStart_toEndOf="@+id/seekBar"
+            app:layout_constraintTop_toTopOf="@+id/seekBar" />
+
+        <Button
+            android:id="@+id/btSettingsBackToMenu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginTop="8dp"
+            android:backgroundTint="#64B308"
+            android:text="@string/back_to_menu"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            app:cornerRadius="15dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</FrameLayout>
